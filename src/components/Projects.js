@@ -13,7 +13,7 @@ const Projects = () => {
       des: "Built a  ",
       mission: "Back-end Developer, system analysis and design",
       language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "/project1.PNG",
+      images: "./images/project1.png",
     },
     {
       name: "Hero Trainer: Rent Expert Trainers for Personalized Classes",
