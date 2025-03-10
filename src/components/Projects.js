@@ -20,7 +20,7 @@ const Projects = () => {
       des: "Built a training partner rental platform using Ruby on Rails, where users can book expert trainers. Integrated GPS functionality to help users find nearby trainers and book in-person sessions. Implemented user authentication and session management to ensure secure and seamless booking experiences. Utilized PostgreSQL for efficient database management and optimized queries for fast retrieval of trainer data.",
       mission: "Back-end Developer, system analysis and design",
       language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "/images/project2.png",
+      images: "/images/project1.jpg",
     },
     {
       name: "Netflix-Inspired Movie Bookmarking App",
