@@ -13,21 +13,21 @@ const Projects = () => {
       des: "Built a  ",
       mission: "Back-end Developer, system analysis and design",
       language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "avatar.jpg",
+      images: "/images/avatar.jpg",
     },
     {
       name: "Hero Trainer: Rent Expert Trainers for Personalized Classes",
       des: "Built a training partner rental platform using Ruby on Rails, where users can book expert trainers. Integrated GPS functionality to help users find nearby trainers and book in-person sessions. Implemented user authentication and session management to ensure secure and seamless booking experiences. Utilized PostgreSQL for efficient database management and optimized queries for fast retrieval of trainer data.",
       mission: "Back-end Developer, system analysis and design",
       language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "/project2.png",
+      images: "/images/project2.png",
     },
     {
       name: "Netflix-Inspired Movie Bookmarking App",
       des: "Built a movie discovery and bookmarking app using Ruby on Rails, allowing users to search for movies and save them to a personal watchlist. Implemented authentication, search functionality, and a user-friendly UI for seamless interaction. Optimized database queries using SQL for efficient search and retrieval, ensuring a smooth user experience.",
       mission: "Back-end Developer, system analysis and design",
       language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "/project3.PNG",
+      images: "/project3.png",
     },
   ]);
   const refTab = useRef();
