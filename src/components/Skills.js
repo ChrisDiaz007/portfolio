@@ -5,8 +5,6 @@ import {
   faHtml5,
   faCss3,
   faJs,
-  faBity,
-  faKeybase,
 } from "@fortawesome/free-brands-svg-icons";
 import CustomHook from "./CustomHook";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
@@ -54,7 +52,7 @@ const Skills = () => {
         This is my skills
       </div>
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>
-        T-T
+        {/* short skills description */}
       </div>
       <div className="list" ref={(el) => el && refDivs.current.push(el)}>
         {listSkills.map((value, key) => (

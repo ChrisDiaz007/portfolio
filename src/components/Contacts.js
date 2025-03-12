@@ -4,8 +4,9 @@ import CustomHook from "./CustomHook";
 const Contacts = () => {
   const [listContacts] = useState([
     {
-      title: "",
-      value: "",
+      title: "GYM, SWIMMING, MUSIC",
+      value:
+        "I'm passionate about fitness and swimming, always striving to improve my physique through consistency and disipline, values that I started bringing to my coding journey. Music is my creative escape, helping me stay inspired and focused.",
     },
     {
       title: "",
@@ -21,7 +22,7 @@ const Contacts = () => {
         Hobbies
       </div>
       <div className="des" ref={(el) => el && divs.current.push(el)}>
-        Gym
+        {/* Short hoobie description */}
       </div>
       <div className="list" ref={(el) => el && divs.current.push(el)}>
         {listContacts.map((value, key) => (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Connect, connect, useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { changeTabActive } from "../redux/action";
 
 const NavBar = ({ activeTab }) => {

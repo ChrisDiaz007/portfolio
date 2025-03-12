@@ -39,7 +39,7 @@ const Projects = () => {
         These are my Projects
       </div>
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>
-        T-T
+        {/* Short project description */}
       </div>
       <div className="list">
         {listProjects.map((value, key) => (

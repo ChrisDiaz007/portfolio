@@ -23,6 +23,7 @@ const Home = () => {
             href="https://github.com/ChrisDiaz007"
             target="_blank"
             rel="noreferrer"
+            className="no-border"
           >
             <img src="github.png" alt="" />
           </a>
@@ -30,6 +31,7 @@ const Home = () => {
             href="https://www.linkedin.com/in/christopher-diaz-2162a9196/"
             target="_blank"
             rel="noreferrer"
+            className="no-border"
           >
             <img src="linkedin.png" alt="" />
           </a>
