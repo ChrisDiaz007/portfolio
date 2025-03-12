@@ -49,7 +49,7 @@ const Skills = () => {
   return (
     <section className="skills" ref={refTab}>
       <div className="title" ref={(el) => el && refDivs.current.push(el)}>
-        This is my skills
+        These are my skills
       </div>
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>
         {/* short skills description */}

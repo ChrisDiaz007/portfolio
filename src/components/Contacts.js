@@ -6,7 +6,7 @@ const Contacts = () => {
     {
       title: "GYM, SWIMMING, MUSIC",
       value:
-        "I'm passionate about fitness and swimming, always striving to improve my physique through consistency and disipline, values that I started bringing to my coding journey. Music is my creative escape, helping me stay inspired and focused.",
+        "I'm passionate about fitness and swimming, always striving to improve my physique through consistency and disipline, values that I started bringing to my coding journey. Music is my focus and relaxation, whether I'm working on projects or unwinding after a workout.",
     },
     {
       title: "",
