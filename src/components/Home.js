@@ -18,9 +18,22 @@ const Home = () => {
           PASSIONATE ABOUT CRAFTING MODERN, SCALABLE SOLUTIONS, I AM EAGER TO
           CONTRIBUTE TO INNOVATIVE PROJECTS AND CONTINUE EXPANDING MY SKILLS.
         </div>
-        <a href="/democv.pdf" target="_blank" rel="noopener noreferrer">
-          Download My CV
-        </a>
+        <div className="icon">
+          <a
+            href="https://github.com/ChrisDiaz007"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="github.png" alt="" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/christopher-diaz-2162a9196/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="linkedin.png" alt="" />
+          </a>
+        </div>
       </div>
       <div className="avatar">
         <div className="card">

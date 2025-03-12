@@ -4,12 +4,12 @@ import CustomHook from "./CustomHook";
 const Contacts = () => {
   const [listContacts] = useState([
     {
-      title: "Phone Number",
-      value: "+17777777777",
+      title: "",
+      value: "",
     },
     {
-      title: "Email",
-      value: "Christopher.a.Diaz007@gmail.com",
+      title: "",
+      value: "",
     },
   ]);
   const refTab = useRef();
@@ -18,10 +18,10 @@ const Contacts = () => {
   return (
     <section className="contacts" ref={refTab}>
       <div className="title" ref={(el) => el && divs.current.push(el)}>
-        This is my Contacts
+        Hobbies
       </div>
       <div className="des" ref={(el) => el && divs.current.push(el)}>
-        123456789
+        Gym
       </div>
       <div className="list" ref={(el) => el && divs.current.push(el)}>
         {listContacts.map((value, key) => (

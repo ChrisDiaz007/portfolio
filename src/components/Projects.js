@@ -9,24 +9,24 @@ import CustomHook from "./CustomHook";
 const Projects = () => {
   const [listProjects] = useState([
     {
-      name: "Reacquaint: Upload tenders for optomized results",
-      des: "Built a  ",
-      mission: "Back-end Developer, system analysis and design",
-      language: "Ruby on rails, Ruby, HTML5, CSS3",
+      name: "Reacquaint",
+      des: "A construction tender evaluation platform enabling bidders to upload tenders and receive AI-driven assessments. The platform integrates AI to evaluate company and employee suitability, generating numerical scores across key criteria such as Budget Control, Environment, Health & Safety, Qualifications, and Quality. Authentication and session management were implemented to ensure secure bidding. PostgreSQL was utilized for efficient data handling, with optimized queries to enable fast retrieval of tender analytics. ",
+      mission: "Back-end Developer + System Analysis + Design",
+      language: "Rails, Ruby, JavaScript, HTML5, CSS, PostgreSQL, OpenAI",
       images: "project1.png",
     },
     {
-      name: "Hero Trainer: Rent Expert Trainers for Personalized Classes",
-      des: "Built a training partner rental platform using Ruby on Rails, where users can book expert trainers. Integrated GPS functionality to help users find nearby trainers and book in-person sessions. Implemented user authentication and session management to ensure secure and seamless booking experiences. Utilized PostgreSQL for efficient database management and optimized queries for fast retrieval of trainer data.",
-      mission: "Back-end Developer, system analysis and design",
-      language: "Ruby on rails, Ruby, HTML5, CSS3",
-      images: "project1.png",
+      name: "Hero Trainer",
+      des: "A training partner rental platform where users can book expert trainers. The platform integrates GPS functionality to help users locate nearby trainers and schedule in-person sessions. User authentication and session management were implemented to ensure secure and seamless booking experiences. PostgreSQL was utilized for efficient database management, with optimized queries to enable fast retrieval of trainer data.",
+      mission: "Back-end Developer + System Analysis + Design",
+      language: "Rails, Ruby, HTML5, CSS, PostgreSQL",
+      images: "project2.png",
     },
     {
-      name: "Netflix-Inspired Movie Bookmarking App",
-      des: "Built a movie discovery and bookmarking app using Ruby on Rails, allowing users to search for movies and save them to a personal watchlist. Implemented authentication, search functionality, and a user-friendly UI for seamless interaction. Optimized database queries using SQL for efficient search and retrieval, ensuring a smooth user experience.",
-      mission: "Back-end Developer, system analysis and design",
-      language: "Ruby on rails, Ruby, HTML5, CSS3",
+      name: "Movie Bookmarking App",
+      des: "A movie discovery and bookmarking app that enables users to search for films and save them to a personal watchlist. The app features authentication, search functionality, and a user-friendly UI for seamless interaction. Database queries were optimized using SQL to ensure efficient search and retrieval, delivering a smooth user experience.",
+      mission: "Back-end Developer + System Analysis + Design",
+      language: "Rails, Ruby, HTML5, CSS, PostgreSQL",
       images: "project3.png",
     },
   ]);
@@ -36,10 +36,10 @@ const Projects = () => {
   return (
     <section className="projects" ref={refTab}>
       <div className="title" ref={(el) => el && refDivs.current.push(el)}>
-        This is my Projects
+        These are my Projects
       </div>
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>
-        short des for projects
+        T-T
       </div>
       <div className="list">
         {listProjects.map((value, key) => (
@@ -61,7 +61,7 @@ const Projects = () => {
                   <FontAwesomeIcon icon={faPersonCircleQuestion} />
                 </div>
                 <div>
-                  <h4>Mission</h4>
+                  <h4>Role</h4>
                   <div className="de">{value.mission}</div>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Projects = () => {
                   <FontAwesomeIcon icon={faEarthAmerica} />
                 </div>
                 <div>
-                  <h4>Languages</h4>
+                  <h4>Tech Stack</h4>
                   <div className="de">{value.language}</div>
                 </div>
               </div>

@@ -308,3 +308,13 @@ section{
     background-position: 200% center;
   }
 }
+
+.icon {
+  /* margin-top: 10px; */
+  display: flex;
+}
+
+.icon img {
+  height: 35px;
+  width: 35px;
+}

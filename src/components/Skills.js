@@ -8,41 +8,41 @@ import {
   faBity,
   faKeybase,
 } from "@fortawesome/free-brands-svg-icons";
-// import { icon } from "@fortawesome/fontawesome-svg-core";
 import CustomHook from "./CustomHook";
-// import { faJ } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faGem } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   const [listSkills] = useState([
     {
-      name: "HTML",
-      des: "Semantic HTML5 for better accessibility and SEO. ",
-      icon: faHtml5,
-    },
-    {
-      name: "CSS",
-      des: "",
-      icon: faCss3,
-    },
-    {
-      name: "Javascript",
-      des: "3",
-      icon: faJs,
+      name: "Ruby on Rails",
+      // des: "Developed full-stack web applications, implementing authentication, database management, and RESTful APIs.",
+      icon: faGem,
     },
     {
       name: "ReactJS",
-      des: "4",
+      // des: "Built dynamic and interactive user interfaces with reusable components.",
       icon: faReact,
     },
     {
-      name: "Ruby on rails",
-      des: "6",
-      icon: faBity,
+      name: "Javascript",
+      // des: "Added interactivity and dynamic features to web applications.",
+      icon: faJs,
     },
     {
-      name: "SQL",
-      des: "7",
-      icon: faKeybase,
+      name: "HTML",
+      // des: "Structured web pages with semantic markup for accessibility and SEO. ",
+      icon: faHtml5,
+    },
+    {
+      name: "CSS/SCSS",
+      // des: "Styled web pages, ensuring responsive and visually appealing designs.",
+      icon: faCss3,
+    },
+    {
+      name: "PostgreSQL",
+      // des: "Wrote database queries and managed data in PostgreSQL.",
+      icon: faDatabase,
     },
   ]);
   const refTab = useRef();
