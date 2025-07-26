@@ -13,7 +13,7 @@ const Projects = () => {
       des: "A construction tender evaluation platform enabling bidders to upload tenders and receive AI-driven assessments. The platform integrates AI to evaluate company and employee suitability, generating numerical scores across key criteria such as Budget Control, Environment, Health & Safety, Qualifications, and Quality. Authentication and session management were implemented to ensure secure bidding. PostgreSQL was utilized for efficient data handling, with optimized queries to enable fast retrieval of tender analytics. ",
       mission: "Back-end Developer + System Analysis + Design",
       language:
-        "Ruby on Rails, JavaScript, HTML5, CSS, PostgreSQL, OpenAI, Figma",
+        "Ruby on Rails, HTML5, CSS, PostgreSQL, OpenAI, Figma",
       images: "project1.png",
     },
     {
@@ -24,11 +24,18 @@ const Projects = () => {
       images: "project2.png",
     },
     {
-      name: "Movie Bookmarking App",
-      des: "A movie discovery and bookmarking app that enables users to search for films and save them to a personal watchlist. The app features authentication, search functionality, and a user-friendly UI for seamless interaction. Database queries were optimized using SQL to ensure efficient search and retrieval, delivering a smooth user experience.",
+      name: "Restaurant App",
+      des: "Build a full-stack restaurant review app, featuring user Authentication, Authorization (Devise & Pundit), and role-based access for users, owners, and admins. The app includes features like user reviews, restaurant ratings, and a search functionality to help users find the best dining options in Tokyo.",
       mission: "Back-end Developer + System Analysis + Design",
       language: "Ruby on Rails, HTML5, CSS, PostgreSQL, Figma",
       images: "project3.png",
+    },
+    {
+      name: "Cafe API",
+      des: "Built a responsive React app to list and search developer-friendly cafes in Tokyo, integrating with a custom Rails API for real-time data.",
+      mission: "Back-end Developer + System Analysis + Design",
+      language: "Rails, React",
+      images: "project4.png",
     },
   ]);
   const refTab = useRef();

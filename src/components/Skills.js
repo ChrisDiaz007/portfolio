@@ -18,7 +18,7 @@ const Skills = () => {
       icon: faGem,
     },
     {
-      name: "ReactJS",
+      name: "React",
       // des: "Built dynamic and interactive user interfaces with reusable components.",
       icon: faReact,
     },

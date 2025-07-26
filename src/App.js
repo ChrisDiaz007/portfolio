@@ -10,7 +10,7 @@ function App() {
     <main>
       <NavBar />
       <Home />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Contacts />
     </main>

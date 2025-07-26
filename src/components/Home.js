@@ -11,14 +11,14 @@ const Home = () => {
           MY NAME IS <span>CHRISTOPHER DIAZ</span>
         </div>
         <div className="des">
-          I AM A WEB DEVELOPER SKILLED IN RUBY ON RAILS AND JAVASCRIPT. I
-          RECENTLY COMPLETED LE WAGON TOKYO'S WEB DEVELOPMENT BOOTCAMP, WHERE I
-          BUILD DYNAMIC AND USER-FRIENDLY WEB APPLICATIONS. MY EXPERTISE INCLUDE
-          FRONTEND DESIGN, BACKEND DEVELOPMENT, AND DATABASE MANAGEMENT.
-          PASSIONATE ABOUT CRAFTING MODERN, SCALABLE SOLUTIONS, I AM EAGER TO
-          CONTRIBUTE TO INNOVATIVE PROJECTS AND CONTINUE EXPANDING MY SKILLS.
+          FULL STACK DEVELOPER <br />
+          HAVING 2 YEARS OF EXPERIENCE IN IT, I DEVELOPED STRONG TEAMWORK
+          SKILLS AND BECAME RESULT ORIENTED. <br />
+          MY SKILLS GO FROM FRONTEND - HTML/CSS, REACT, STIMULUS, TAILWIND <br />
+          TO BACKEND - RUBY ON RAILs, POSTGRESQL, HEROKU.
         </div>
-        <div className="icon">
+        <div className="logo-icons">
+          FIND ME HERE:
           <a
             href="https://github.com/ChrisDiaz007"
             target="_blank"
@@ -35,17 +35,26 @@ const Home = () => {
           >
             <img src="linkedin.png" alt="" />
           </a>
+          <a href="/democv.pdf" target="_blank" rel="noopener noreferrer" className='animation active '>
+                Download My CV
+            </a>
+
+        </div>
+        <div className="logo-image">
+          <img src="logo1.png" alt="" />
+          <img src="logo2.png" alt="" />
+          <img src="logo3.png" alt="" />
+          <img src="logo4.png" alt="" />
+          <img src="logo5.png" alt="" />
+          <img src="logo6.png" alt="" />
+          <img src="logo7.png" alt="" />
+          <img src="logo8.png" alt="" />
+          <img src="logo9.png" alt="" />
         </div>
       </div>
       <div className="avatar">
         <div className="card">
           <img src="demoday.jpg" alt="" />
-          <div className="info">
-            <div>Developer</div>
-            <div>Hispanic</div>
-            <div>Male</div>
-            <div>05/09</div>
-          </div>
         </div>
       </div>
     </section>
