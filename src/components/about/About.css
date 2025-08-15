@@ -1,0 +1,114 @@
+.about {
+  /* fluid height & padding */
+  min-height: clamp(520px, 70vh, 900px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 16px 32px; /* top spacing for any fixed header */
+}
+
+.about_top_container {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+  max-width: 1100px; /* keeps lines readable on large screens */
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap; /* allows wrapping on narrower screens */
+}
+
+.about_first_selection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 320px; /* grows/shrinks with space */
+}
+
+.aboutMe_image {
+  width: min(100%, 360px);
+  height: auto;
+  aspect-ratio: 4 / 5; /* consistent portrait crop */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about_second_selection {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 380px; /* fluid text column */
+  max-width: 640px;
+}
+
+/* Typography scales with viewport */
+.about_second_selection h2 {
+  font-weight: 700;
+  font-size: clamp(14px, 1.5vw, 20px);
+  letter-spacing: 0.08em;
+}
+
+.about_second_selection h3 {
+  font-weight: 700;
+  font-size: clamp(18px, 2vw, 28px);
+  margin-top: 6px;
+}
+
+.about_second_selection p {
+  margin-top: 10px;
+  line-height: 1.65;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* Emoji Rotator */
+.circle-text {
+  animation: spin 12s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Position & scale emoji badge responsively */
+.Engineer_emoji {
+  position: absolute;
+  right: clamp(-12px, -2vw, -24px);
+  bottom: clamp(-12px, -2vw, -24px);
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: clamp(6px, 1.2vw, 10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Accessibility: reduce spinning if user prefers less motion */
+@media (prefers-reduced-motion: reduce) {
+  .circle-text {
+    animation: none;
+  }
+}
+
+/* Tablet: stack vertically, center text */
+@media (max-width: 900px) {
+  .about_top_container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about_second_selection {
+    max-width: 700px;
+  }
+}
+
+/* Mobile: keep image full-width, make emoji non-overlapping */
+@media (max-width: 600px) {
+  .aboutMe_image {
+    width: 100%;
+    max-width: 420px;
+  }
+  .Engineer_emoji {
+    position: static; /* stop overlapping on tiny screens */
+    margin-top: 10px;
+    align-self: center;
+  }
+}

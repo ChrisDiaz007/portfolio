@@ -219,13 +219,13 @@ section.projects {
   & .title {
     margin-top: 100px;
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
     font-family: "MuseoModerno", system-ui;
   }
   & .des {
     color: rgb(255, 255, 255);
     text-align: center;
-    max-width: 500px;
+    /* max-width: 500px; */
     margin: auto;
   }
   & .list {
@@ -245,19 +245,27 @@ section.projects {
         overflow: hidden;
 
         & img {
-          height: 400px;
+          height: 276px;
           border-radius: 10px;
           box-shadow: 0 20px 40px #010824;
         }
       }
       & .content {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        /* align-items: center; */
+        max-width: 500px;
+        padding-left: 50px;
         & h3 {
           font-size: 3em;
           margin: 0;
+          text-align: center;
         }
         & .des {
           text-align: left;
           width: 100%;
+          text-align: justify;
         }
         & .mission {
           display: grid;
@@ -270,6 +278,10 @@ section.projects {
             padding: 20px;
             font-size: 20px;
             border-radius: 15px;
+          }
+          & .de {
+            position: relative;
+            top: -16px;
           }
         }
       }
@@ -422,4 +434,9 @@ section.contacts {
   height: 50px;
   object-fit: contain;
   transition: transform 0.2s ease;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
 }
