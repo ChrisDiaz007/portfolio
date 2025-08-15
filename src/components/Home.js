@@ -1,21 +1,42 @@
 import React, { useRef } from "react";
 import CustomHook from "./CustomHook";
+import demoDay from "../assets/demoday.jpg";
+import logo1 from "../assets/logo1.png";
+import logo2 from "../assets/logo2.png";
+import logo3 from "../assets/logo3.png";
+import logo4 from "../assets/logo4.png";
+import logo5 from "../assets/logo5.png";
+import logo6 from "../assets/logo6.png";
+import logo7 from "../assets/logo7.png";
+import logo8 from "../assets/logo8.png";
+import logo9 from "../assets/logo9.png";
+import logo10 from "../assets/logo10.png";
 
 const Home = () => {
+  const techStack = [
+    { src: logo1, alt: "Tech 1" },
+    { src: logo2, alt: "Tech 2" },
+    { src: logo3, alt: "Tech 3" },
+    { src: logo4, alt: "Tech 4" },
+    { src: logo5, alt: "Tech 5" },
+    { src: logo6, alt: "Tech 6" },
+    { src: logo7, alt: "Tech 7" },
+    { src: logo8, alt: "Tech 8" },
+    { src: logo9, alt: "Tech 9" },
+    { src: logo10, alt: "Tech 10" },
+  ];
+
   const refTab = useRef();
   CustomHook(refTab);
   return (
     <section className="home" ref={refTab}>
       <div className="content">
         <div className="name">
-          MY NAME IS <span>CHRISTOPHER DIAZ</span>
+          Full-Stack Engineer 👋 <span></span>
         </div>
         <div className="des">
-          FULL STACK DEVELOPER <br />
-          HAVING 2 YEARS OF EXPERIENCE IN IT, I DEVELOPED STRONG TEAMWORK
-          SKILLS AND BECAME RESULT ORIENTED. <br />
-          MY SKILLS GO FROM FRONTEND - HTML/CSS, REACT, STIMULUS, TAILWIND <br />
-          TO BACKEND - RUBY ON RAILs, POSTGRESQL, HEROKU.
+          Hi, I'm Christopher Diaz. A passionated Full-Stack Engineer based in
+          the Florida, United Stated. 📍
         </div>
         <div className="logo-icons">
           FIND ME HERE:
@@ -35,27 +56,24 @@ const Home = () => {
           >
             <img src="linkedin.png" alt="" />
           </a>
-          <a href="https://ChrisDiaz007.github.io/portfolio/democv.pdf"
-            target="_blank" rel="noopener noreferrer" className='animation active '>
+          <a
+            href="https://ChrisDiaz007.github.io/portfolio/democv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animation active "
+          >
             Download My CV
-            </a>
-
+          </a>
         </div>
-        <div className="logo-image">
-          <img src="logo1.png" alt="" />
-          <img src="logo2.png" alt="" />
-          <img src="logo3.png" alt="" />
-          <img src="logo4.png" alt="" />
-          <img src="logo5.png" alt="" />
-          <img src="logo6.png" alt="" />
-          <img src="logo7.png" alt="" />
-          <img src="logo8.png" alt="" />
-          <img src="logo9.png" alt="" />
+        <div className="tech-stack">
+          {techStack.map((tech, index) => (
+            <img src={tech.src} alt={tech.alt} className="tech-logo" />
+          ))}
         </div>
       </div>
       <div className="avatar">
         <div className="card">
-          <img src="demoday.jpg" alt="" />
+          <img src={demoDay} alt="" />
         </div>
       </div>
     </section>

@@ -10,15 +10,14 @@ const Projects = () => {
   const [listProjects] = useState([
     {
       name: "Reacquaint",
-      des: "A construction tender evaluation platform enabling bidders to upload tenders and receive AI-driven assessments. The platform integrates AI to evaluate company and employee suitability, generating numerical scores across key criteria such as Budget Control, Environment, Health & Safety, Qualifications, and Quality. Authentication and session management were implemented to ensure secure bidding. PostgreSQL was utilized for efficient data handling, with optimized queries to enable fast retrieval of tender analytics. ",
+      des: "A construction tender evaluation platform enabling bidders to upload tenders and receive AI-driven assessments and scores across key criterias such as Budget Control, Environment, Health & Safery, Qualification, and Quality.",
       mission: "Back-end Developer + System Analysis + Design",
-      language:
-        "Ruby on Rails, HTML5, CSS, PostgreSQL, OpenAI, Figma",
+      language: "Ruby on Rails, HTML5, CSS, PostgreSQL, OpenAI, Figma",
       images: "project1.png",
     },
     {
       name: "Hero Trainer",
-      des: "A training partner rental platform where users can book expert trainers. The platform integrates GPS functionality to help users locate nearby trainers and schedule in-person sessions. User authentication and session management were implemented to ensure secure and seamless booking experiences. PostgreSQL was utilized for efficient database management, with optimized queries to enable fast retrieval of trainer data.",
+      des: "A trainer website is a comprehensive resource for fitness information, cross scheduales, membership options, and tools to help users achieve their fitness goals",
       mission: "Back-end Developer + System Analysis + Design",
       language: "Ruby on Rails, HTML5, CSS, PostgreSQL, Figma",
       images: "project2.png",
