@@ -7,6 +7,7 @@ import {
 import CustomHook from "./CustomHook";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
+import project4 from "../assets/project4.png";
 import GithubButton from "./buttons/GithubButton";
 import DemoButton from "./buttons/DemoButton";
 
@@ -28,7 +29,7 @@ const Projects = () => {
       language: "Ruby on Rails, HTML5, CSS, PostgreSQL, Figma",
       images: project2,
       githubURL: "https://github.com/ChrisDiaz007/hero-trainer-solo",
-      livedemoUrl: "https://www.reacquaint.online/",
+      livedemoUrl: "https://hero-trainers-3164fedf77da.herokuapp.com",
     },
     {
       name: "Restaurant App",
@@ -42,7 +43,9 @@ const Projects = () => {
       des: "Built a responsive React app to list and search developer-friendly cafes in Tokyo, integrating with a custom Rails API for real-time data.",
       mission: "Back-end Developer + System Analysis + Design",
       language: "Rails, React",
-      images: "project4.png",
+      images: project4,
+      githubURL: "https://github.com/ChrisDiaz007/rails-cafe-api",
+      livedemoUrl: "https://rails-cafe-api-2025-3ad0102200c5.herokuapp.com/",
     },
   ]);
 
