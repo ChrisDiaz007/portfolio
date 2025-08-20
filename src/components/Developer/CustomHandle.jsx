@@ -1,19 +1,9 @@
 import { Handle, Position } from "@xyflow/react";
 
-const CustomeHandle = ({ data }) => {
+const CustomHandle = ({ data }) => {
   return (
     // prettier-ignore
-    <div
-      style={{
-        padding: "10px 30px",
-        border: "3px solid #000000ff",
-        borderRadius: 3,
-        background: "#83e1d3ff",
-        textAlign: "center",
-        fontSize: "16px",
-        fontWeight: "bold",
-      }}
-    >
+    <div className="Custome-Handle">
       {data?.label ?? "Node"}
 
       {/* TOP */}
@@ -35,4 +25,4 @@ const CustomeHandle = ({ data }) => {
   );
 };
 
-export default CustomeHandle;
+export default CustomHandle;

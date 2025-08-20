@@ -7,8 +7,8 @@ import {
   addEdge,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import CustomeHandle from "./CustomeHandle";
-import CustomHandleDot from "./CustomHandleDot";
+import CustomeHandle from "./CustomHandle";
+import CustomHandleDot from "./CustomHandleSub";
 
 const nodeTypes = {
   custom: CustomeHandle,
@@ -106,7 +106,7 @@ function ReactFlowDeveloper() {
   );
 }
 
-const Developer = () => {
+const Developers = () => {
   return (
     <section className="Developer">
       <ReactFlowDeveloper />
@@ -114,4 +114,4 @@ const Developer = () => {
   );
 };
 
-export default Developer;
+export default Developers;
