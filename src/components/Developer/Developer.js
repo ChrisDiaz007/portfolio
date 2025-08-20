@@ -1,134 +1,115 @@
-import { initialNodes, initialEdges } from "./initialElement.js";
-import ELK from "elkjs/lib/elk.bundled.js";
-import React, { useCallback, useLayoutEffect } from "react";
+import "./Developer.css";
+import { useState, useCallback } from "react";
 import {
-  Background,
   ReactFlow,
-  ReactFlowProvider,
+  applyNodeChanges,
+  applyEdgeChanges,
   addEdge,
-  Panel,
-  useNodesState,
-  useEdgesState,
-  useReactFlow,
 } from "@xyflow/react";
-
 import "@xyflow/react/dist/style.css";
+import CustomeHandle from "./CustomeHandle";
+import CustomHandleDot from "./CustomHandleDot";
 
-const elk = new ELK();
-
-// Elk has a *huge* amount of options to configure. To see everything you can
-// tweak check out:
-//
-// - https://www.eclipse.org/elk/reference/algorithms.html
-// - https://www.eclipse.org/elk/reference/options.html
-const elkOptions = {
-  "elk.algorithm": "layered",
-  "elk.layered.spacing.nodeNodeBetweenLayers": "100",
-  "elk.spacing.nodeNode": "80",
+const nodeTypes = {
+  custom: CustomeHandle,
+  customSub: CustomHandleDot,
 };
 
-const getLayoutedElements = (nodes, edges, options = {}) => {
-  const isHorizontal = options?.["elk.direction"] === "RIGHT";
-  const graph = {
-    id: "root",
-    layoutOptions: options,
-    children: nodes.map((node) => ({
-      ...node,
-      // Adjust the target and source handle positions based on the layout
-      // direction.
-      targetPosition: isHorizontal ? "left" : "top",
-      sourcePosition: isHorizontal ? "right" : "bottom",
+// prettier-ignore
+const initialNodes = [
+  { id: "n1", position: { x: 0, y: 0 }, data: { label: "RoadMap" }, type: "custom" },
+  { id: "n2", position: { x: -2, y: 100 }, data: { label: "developer" }, type: "custom" },
+  { id: "n3", position: { x: -160, y: 220 }, data: { label: "Language" }, type: "custom" },
+  { id: "n3a", position: { x: -374, y: 220 }, data: { label: "JavaScript" }, type: "customSub" },
+  { id: "n3b", position: { x: -485, y: 220 }, data: { label: "Ruby" }, type: "customSub" },
+  { id: "n4", position: { x: 0, y: 350 }, data: { label: "Version Control System" }, type: "custom" },
+  { id: "n4a", position: { x: 85, y: 250 }, data: { label: "Git" }, type: "customSub" },
+  { id: "n5", position: { x: -479, y: 480 }, data: { label: "Repo Hosting Services" }, type: "custom" },
+  { id: "n5a", position: { x: -417, y: 380 }, data: { label: "GitHub" }, type: "customSub" },
+  { id: "n6", position: { x: 8, y: 600 }, data: { label: "Relational Databases" }, type: "custom" },
+  { id: "n6a", position: { x: 49, y: 500 }, data: { label: "PostgreSQL" }, type: "customSub" },
+  { id: "n6b", position: { x: 370, y: 450 }, data: { label: "MySQL" }, type: "customSub" },
+  { id: "n7", position: { x: 78, y: 850 }, data: { label: "APIs" }, type: "custom" },
+  { id: "n7a", position: { x: 305, y: 750 }, data: { label: "Authentication" }, type: "customSub" },
+  { id: "n7b", position: { x: 305, y: 800 }, data: { label: "JWT" }, type: "customSub" },
+  { id: "n7c", position: { x: 406, y: 800 }, data: { label: "OAuth" }, type: "customSub" },
+  { id: "n7d", position: { x: 305, y: 850 }, data: { label: "Basic Authentication" }, type: "customSub" },
+  { id: "n7e", position: { x: 305, y: 900 }, data: { label: "Cookie Authentication" }, type: "customSub" },
 
-      // Hardcode a width and height for elk to use when layouting.
-      width: 150,
-      height: 50,
-    })),
-    edges: edges,
-  };
 
-  return elk
-    .layout(graph)
-    .then((layoutedGraph) => ({
-      nodes: layoutedGraph.children.map((node) => ({
-        ...node,
-        // React Flow expects a position property on the node instead of `x`
-        // and `y` fields.
-        position: { x: node.x, y: node.y },
-      })),
+  { id: "end", position: { x: 600, y: 1500 }, data: { label: "end" }, type: "custom" },
+];
 
-      edges: layoutedGraph.edges,
-    }))
-    .catch(console.error);
-};
+// prettier-ignore
+const initialEdges = [
+  { id: "n1-n2", source: "n1", target: "n2" },
+  { id: "n2-n3", source: "n2", target: "n3", sourceHandle: "s-left", targetHandle: "t-top" },
+  { id: "n3-n3a", source: "n3", target: "n3a", sourceHandle: "s-left", targetHandle: "t-right", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
+  { id: "n3-n4", source: "n3", target: "n4", sourceHandle: "s-bottom", targetHandle: "t-left" },
+  { id: "n4-n4a", source: "n4", target: "n4a", sourceHandle: "s-top", targetHandle: "t-bottom", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
+  { id: "n4-n5", source: "n4", target: "n5", sourceHandle: "s-left", targetHandle: "t-right" },
+  { id: "n5-n5a", source: "n5", target: "n5a", sourceHandle: "s-top", targetHandle: "t-bottom", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
+  { id: "n5-n6", source: "n5", target: "n6", sourceHandle: "s-right", targetHandle: "t-left" },
+  { id: "n6-n6a", source: "n6", target: "n6a", sourceHandle: "s-top", targetHandle: "t-bottom", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
+  { id: "n6-n6b", source: "n6", target: "n6b", sourceHandle: "s-right", targetHandle: "t-left", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
+  { id: "n6-n7", source: "n6", target: "n7", sourceHandle: "s-bottom", targetHandle: "t-top" },
+  { id: "n7-n7a", source: "n7", target: "n7a", sourceHandle: "s-right", targetHandle: "t-left", style: { strokeWidth: 3, stroke: "#ffffffff", strokeDasharray: "3 9" } },
 
-function LayoutFlow() {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-  const { fitView } = useReactFlow();
 
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
+
+];
+
+function ReactFlowDeveloper() {
+  const [nodes, setNodes] = useState(initialNodes);
+  const [edges, setEdges] = useState(initialEdges);
+
+  const onNodesChange = useCallback(
+    (changes) =>
+      setNodes((nodesSnapshot) => applyNodeChanges(changes, nodesSnapshot)),
     []
   );
-  const onLayout = useCallback(
-    ({ direction, useInitialNodes = false }) => {
-      const opts = { "elk.direction": direction, ...elkOptions };
-      const ns = useInitialNodes ? initialNodes : nodes;
-      const es = useInitialNodes ? initialEdges : edges;
-
-      getLayoutedElements(ns, es, opts).then(
-        ({ nodes: layoutedNodes, edges: layoutedEdges }) => {
-          setNodes(layoutedNodes);
-          setEdges(layoutedEdges);
-          fitView();
-        }
-      );
-    },
-    [nodes, edges]
+  const onEdgesChange = useCallback(
+    (changes) =>
+      setEdges((edgesSnapshot) => applyEdgeChanges(changes, edgesSnapshot)),
+    []
+  );
+  const onConnect = useCallback(
+    (params) => setEdges((edgesSnapshot) => addEdge(params, edgesSnapshot)),
+    []
   );
 
-  // Calculate the initial layout on mount.
-  useLayoutEffect(() => {
-    onLayout({ direction: "DOWN", useInitialNodes: true });
-  }, []);
-
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onConnect={onConnect}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      fitView
-    >
-      <Panel position="top-right">
-        {/* <button
-          className="xy-theme__button"
-          onClick={() => onLayout({ direction: "DOWN" })}
-        >
-          vertical layout
-        </button>
-
-        <button
-          className="xy-theme__button"
-          onClick={() => onLayout({ direction: "RIGHT" })}
-        >
-          horizontal layout
-        </button> */}
-      </Panel>
-      <Background />
-    </ReactFlow>
+    <div style={{ width: "100%", height: "150vh" }}>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+        fitView
+        nodeTypes={nodeTypes}
+        preventScrolling={false}
+        defaultEdgeOptions={{ style: { strokeWidth: 3, stroke: "#ffffffff" } }}
+        /* 🔒 Freeze everything */
+        nodesDraggable={false}
+        nodesConnectable={false}
+        elementsSelectable={false}
+        edgesUpdatable={false}
+        /* 🔒 Lock the viewport */
+        panOnDrag={false}
+        panOnScroll={false}
+        zoomOnScroll={false}
+        zoomOnPinch={false}
+        zoomOnDoubleClick={false}
+      />
+    </div>
   );
 }
 
 const Developer = () => {
   return (
     <section className="Developer">
-      <div style={{ height: 1200, color: "black" }}>
-        <ReactFlowProvider>
-          <LayoutFlow />
-        </ReactFlowProvider>
-      </div>
+      <ReactFlowDeveloper />
     </section>
   );
 };
