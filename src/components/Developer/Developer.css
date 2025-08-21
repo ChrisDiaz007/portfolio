@@ -32,3 +32,88 @@
   cursor: pointer;
   background-color: #70bcb1;
 }
+
+/* SidePanel CSS */
+.sp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 100;
+}
+
+.sp-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 560px;
+  max-width: 100%;
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 101;
+
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+}
+
+.sp-panel--open {
+  transform: translateX(0);
+}
+
+.sp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sp-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.sp-close {
+  font-size: 14px;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.sp-description {
+  line-height: 1.5;
+}
+
+.sp-subtitle {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.sp-links {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.sp-linkItem {
+  margin-bottom: 10px;
+}
+
+.sp-link {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.sp-link:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-panel {
+    transition: none;
+  }
+}
