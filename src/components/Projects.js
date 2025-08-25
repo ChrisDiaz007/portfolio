@@ -8,6 +8,7 @@ import CustomHook from "./CustomHook";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project4 from "../assets/project4.png";
+import project5 from "../assets/project5.png";
 import GithubButton from "./buttons/GithubButton";
 import DemoButton from "./buttons/DemoButton";
 
@@ -20,7 +21,7 @@ const Projects = () => {
       language: "Ruby on Rails, HTML5, CSS, PostgreSQL, OpenAI, Figma",
       images: project1,
       githubURL: "https://github.com/adi-kotian/reacquaint",
-      livedemoUrl: "https://www.reacquaint.online/",
+      liveDemoUrl: "https://www.reacquaint.online/",
     },
     {
       name: "Hero Trainer",
@@ -29,14 +30,7 @@ const Projects = () => {
       language: "Ruby on Rails, HTML5, CSS, PostgreSQL, Figma",
       images: project2,
       githubURL: "https://github.com/ChrisDiaz007/hero-trainer-solo",
-      livedemoUrl: "https://hero-trainers-3164fedf77da.herokuapp.com",
-    },
-    {
-      name: "Restaurant App",
-      des: "Build a full-stack restaurant review app, featuring user Authentication, Authorization (Devise & Pundit), and role-based access for users, owners, and admins. The app includes features like user reviews, restaurant ratings, and a search functionality to help users find the best dining options in Tokyo.",
-      mission: "Back-end Developer + System Analysis + Design",
-      language: "Ruby on Rails, HTML5, CSS, PostgreSQL, Figma",
-      images: "project3.png",
+      liveDemoUrl: "https://hero-trainers-3164fedf77da.herokuapp.com",
     },
     {
       name: "Cafe API",
@@ -45,7 +39,16 @@ const Projects = () => {
       language: "Rails, React",
       images: project4,
       githubURL: "https://github.com/ChrisDiaz007/rails-cafe-api",
-      livedemoUrl: "https://rails-cafe-api-2025-3ad0102200c5.herokuapp.com/",
+      liveDemoUrl: "https://rails-cafe-api-2025-3ad0102200c5.herokuapp.com/",
+    },
+    {
+      name: "Watch List",
+      des: "Built a responsive rails app that lets users create and manage movie watch lists, bookmark movies with comments, and styled with Bootstrap.",
+      mission: "Back-end Developer + System Analysis + Design",
+      language: "Ruby on Rails, HTML5, CSS, PostgreSQL",
+      images: project5,
+      githubURL: "https://github.com/ChrisDiaz007/rails-watch-list/tree/master",
+      liveDemoUrl: "https://watch-list-chris-65a7ee686c2e.herokuapp.com/",
     },
   ]);
 
@@ -105,7 +108,7 @@ const Projects = () => {
                 </div>
                 <div className="demo-button">
                   <a
-                    href={value.livedemoUrl}
+                    href={value.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -11,8 +11,8 @@ function App() {
   return (
     <main>
       <NavBar />
-      <Developer />
-      {/* <Home /> */}
+      {/* <Developer /> */}
+      <Home />
       {/* <Skills /> */}
       <About />
       <Projects />
