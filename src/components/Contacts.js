@@ -1,4 +1,6 @@
 import Swal from "sweetalert2";
+import CustomHook from "./CustomHook";
+import { useRef } from "react";
 
 function Contacts() {
   const onSubmit = async (event) => {
@@ -30,19 +32,25 @@ function Contacts() {
     }
   };
 
+  const divs = useRef([]);
+  const scrollTab = useRef();
+  CustomHook(scrollTab, divs);
+
   return (
-    <section className="Contacts">
+    <section className="contacts" ref={scrollTab}>
       <h1>Contact me by Email</h1>
-      <form onSubmit={onSubmit} className="Contact-form">
-        Name: <input type="text" name="name" className="form-input" />
-        Email Address:{" "}
-        <input type="email" name="email" className="form-input" />
-        Your Message:{" "}
-        <textarea name="message" className="form-input" rows={6}></textarea>
-        <button type="submit" className="form-Submit">
-          Submit
-        </button>
-      </form>
+      <div className="form-selection">
+        <form onSubmit={onSubmit} className="Contact-form">
+          Name: <input type="text" name="name" className="form-input" />
+          Email Address:{" "}
+          <input type="email" name="email" className="form-input" />
+          Your Message:{" "}
+          <textarea name="message" className="form-input" rows={6}></textarea>
+          <button type="submit" className="form-Submit">
+            Submit
+          </button>
+        </form>
+      </div>
     </section>
   );
 }
