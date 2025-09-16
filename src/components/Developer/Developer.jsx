@@ -1,5 +1,5 @@
 import "./Developer.css";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import {
   ReactFlow,
   applyNodeChanges,
@@ -10,6 +10,7 @@ import "@xyflow/react/dist/style.css";
 import { nodeTypes, initialNodes, initialEdges } from "./initialElements";
 import SidePanel from "./SidePanel";
 import { TopicContent } from "./Topics";
+import CustomHook from "../CustomHook";
 
 function ReactFlowDeveloper() {
   const [nodes, setNodes] = useState(initialNodes);
@@ -78,10 +79,20 @@ function ReactFlowDeveloper() {
     </div>
   );
 }
+
 const Developer = () => {
+  //hook
+  const refTab = useRef(null);
+  CustomHook(refTab);
+
   return (
-    <section className="Developer">
-      <ReactFlowDeveloper />
+    <section className="roadmap" ref={refTab}>
+      <div className="Journey">
+        <h1>Journey</h1>
+      </div>
+      <div>
+        <ReactFlowDeveloper />
+      </div>
     </section>
   );
 };

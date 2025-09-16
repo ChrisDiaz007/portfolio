@@ -38,7 +38,9 @@ function Contacts() {
 
   return (
     <section className="contacts" ref={scrollTab}>
-      <h1>Contact me by Email</h1>
+      <div className="contact-title">
+        <h1>Contact me by Email</h1>
+      </div>
       <div className="form-selection">
         <form onSubmit={onSubmit} className="Contact-form">
           Name: <input type="text" name="name" className="form-input" />

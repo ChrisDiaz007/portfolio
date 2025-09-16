@@ -451,6 +451,10 @@ section.contacts {
   align-items: center;
 }
 
+.contact-title {
+  font-size: 2vw;
+}
+
 .form-selection {
   width: 100%;
   /* padding: 30px 40px; */

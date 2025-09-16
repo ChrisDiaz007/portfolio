@@ -1,6 +1,6 @@
 .about {
   /* fluid height & padding */
-  min-height: clamp(520px, 70vh, 900px);
+  min-height: clamp(520px, 85vh, 900px);
   display: flex;
   align-items: center;
   justify-content: center;
