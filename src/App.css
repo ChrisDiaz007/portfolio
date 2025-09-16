@@ -443,7 +443,9 @@ section.contacts {
 
 .Contacts {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .Contact-form {
@@ -455,4 +457,18 @@ section.contacts {
   border-radius: 20px;
   overflow: hidden;
   font-size: 16px;
+}
+
+.form-Submit {
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.form-Submit:hover {
+  cursor: pointer;
+  background-color: #be24e9;
+}
+
+.form-input {
+  padding: 5px;
 }

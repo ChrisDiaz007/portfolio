@@ -32,11 +32,16 @@ function Contacts() {
 
   return (
     <section className="Contacts">
+      <h1>Contact me by Email</h1>
       <form onSubmit={onSubmit} className="Contact-form">
-        Name: <input type="text" name="name" />
-        Email Address: <input type="email" name="email" />
-        Your Message: <textarea name="message" rows={6}></textarea>
-        <button type="submit">Submit Form</button>
+        Name: <input type="text" name="name" className="form-input" />
+        Email Address:{" "}
+        <input type="email" name="email" className="form-input" />
+        Your Message:{" "}
+        <textarea name="message" className="form-input" rows={6}></textarea>
+        <button type="submit" className="form-Submit">
+          Submit
+        </button>
       </form>
     </section>
   );
