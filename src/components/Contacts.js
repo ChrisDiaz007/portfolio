@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 function Contacts() {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -15,14 +17,16 @@ function Contacts() {
         Accept: "application/json",
       },
       body: json,
-    }).then((res) => {
-      console.log("Message Sent");
-      const msg = "Message Sent";
-      alert(msg);
-    });
+    }).then((res) => res.json());
 
     if (res.success) {
-      console.log("Success", res);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Message send successfully!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
@@ -31,7 +35,7 @@ function Contacts() {
       <form onSubmit={onSubmit} className="Contact-form">
         Name: <input type="text" name="name" />
         Email Address: <input type="email" name="email" />
-        Your Message: <textarea name="message"></textarea>
+        Your Message: <textarea name="message" rows={6}></textarea>
         <button type="submit">Submit Form</button>
       </form>
     </section>

@@ -60,7 +60,7 @@ const Home = () => {
             href="https://ChrisDiaz007.github.io/portfolio/democv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="animation active "
+            className="animation active"
           >
             Download My CV
           </a>
