@@ -35,8 +35,9 @@
 }
 
 .Btn:hover::before {
+  /* transform: translate(-50%, -50%) scale(1.2); */
   transition-duration: 0.3s;
-  transform: translate(100%, -50%);
+  transform: translate(100%, -50%) scale(1.2);
   border-radius: 0;
 }
 

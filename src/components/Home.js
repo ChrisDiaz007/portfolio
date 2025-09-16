@@ -67,7 +67,12 @@ const Home = () => {
         </div>
         <div className="tech-stack">
           {techStack.map((tech, index) => (
-            <img src={tech.src} alt={tech.alt} className="tech-logo" />
+            <img
+              key={index}
+              src={tech.src}
+              alt={tech.alt}
+              className="tech-logo"
+            />
           ))}
         </div>
       </div>

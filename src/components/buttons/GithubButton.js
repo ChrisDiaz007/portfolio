@@ -2,7 +2,7 @@ import "./Button.css";
 
 const GithubButton = () => {
   return (
-    <button class="Btn">
+    <button className="Btn">
       <svg
         width="24"
         height="24"

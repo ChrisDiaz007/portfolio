@@ -440,3 +440,14 @@ section.contacts {
   display: flex;
   gap: 20px;
 }
+
+.Contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.Contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}

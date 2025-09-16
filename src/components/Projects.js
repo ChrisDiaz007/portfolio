@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPersonCircleQuestion,
   faEarthAmerica,
 } from "@fortawesome/free-solid-svg-icons";
 import CustomHook from "./CustomHook";
