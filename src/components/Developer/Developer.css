@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+.sp-close:hover {
+  background-color: lightgray;
+}
+
 .sp-description {
   line-height: 1.5;
 }

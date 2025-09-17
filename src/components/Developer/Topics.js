@@ -5,9 +5,9 @@ export const TopicContent = {
       "I created this Reactflow to as a little idea to show the roadpath i taken, later decided to make it a complete RoadMap with documentation to show my journey as a fullstack developer.",
   },
   n2: {
-    title: "Developer",
+    title: "Developer: How it all began",
     description:
-      "How it all began: I had some interest in software development for some time, but my journey truly began when i enrolled for LeWagon Web Development Bootcamp in Tokyo, I tried to self study here and there, but with so much recources in the internet now a days i felt too overwhelmed with all the information and didn't have a devisive plan on where to start. One day i was scrolling around in the web and saw an ad about le wagon, did some research, decided to enroll in Tokyo, Japan, and let me tell you it was one of the best experiences i had, I also visited Japan twice so i didn't mind enrolling so far away from home. Thank you Le Wagon, and Professors for all the guidance, i am now a proud graduate for Batch #1885.",
+      "I had some interest in software development for some time, but my journey truly began when i decided to enroll for LeWagon Web Development Bootcamp in Tokyo, I tried to self study here and there, but with so much recources in the internet now a days i felt too overwhelmed with all the information and didn't have a devisive plan on where to start. One day as i was scrolling around the web, I saw an ad about le wagon, did some research, decided to enroll in Tokyo, Japan, and let me tell you it was one of the best experiences i had, I previously visited Japan twice so i didn't mind living so far away from home. Skip 3 months and now i give my thanks to Le Wagon,  all T.A. for all the help and guidance throught my first steps, and now I can say I am now a proud graduate for Batch #1885.",
     links: [
       {
         label: "https://www.lewagon.com/tokyo",
