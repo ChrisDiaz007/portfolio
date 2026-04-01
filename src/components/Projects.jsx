@@ -32,13 +32,23 @@ const Projects = () => {
                 daily calorie intake against a personal goal.
               </p>
             </div>
+            <div className="flex gap-5">
+              <div>
+                <p>Github Repo</p>
+              </div>
+              <div>
+                <p>Web Link</p>
+              </div>
+            </div>
           </div>
-          <div className="Project">
+          <div className="Project rounded-2xl p-6 flex flex-col gap-5 ">
             <div>
               <img src={reacquaint} alt="" />
             </div>
             <div>
-              <title>Nuvy</title>
+              <p>Nuby</p>
+            </div>
+            <div>
               <div className="TechStack flex flex-wrap gap-2">
                 <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" />
                 <img src="https://img.shields.io/badge/Rails-CC0000?style=for-the-badge&logo=rubyonrails&logoColor=white" />
@@ -46,6 +56,8 @@ const Projects = () => {
                 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
                 <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
               </div>
+            </div>
+            <div>
               <p>
                 A mobile-first Rails web app that helps users understand the
                 nutritional quality of food by scanning barcodes and tracking
@@ -54,6 +66,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <div className="flex pt-10">View more work on Github</div>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ const Home = () => {
       <div className="absolute inset-0 -z-1">
         <SplineScene />
       </div>
-      <div className="w-325 relative z-1 p-5">
+      <div className="w-325 relative z-1 p-5 ">
         <div className="flex">
           <div className="w-2/4">
             <h1 className="font-bold">
@@ -34,10 +34,10 @@ const Home = () => {
           <div className="pb-5">
             <h2 className="text-[40px] font-bold">Skills</h2>
           </div>
-          <div className="border-l-18 flex flex-col pl-7 border-l-fuchsia-500 font-bold text-fuchsia-500">
+          <div className="border-l-18 flex flex-col pl-7 border-l-fuchsia-500 font-bold text-fuchsia-400">
             <div className="skill card">
               <div className="text-[28px]">Front-End</div>
-              <div className="skill-bar flex gap-2 ">
+              <div className="skill-bar flex gap-2 flex-wrap">
                 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
                 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
                 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
@@ -47,9 +47,9 @@ const Home = () => {
                 <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
               </div>
             </div>
-            <div className="skill card">
+            <div className="skill card ">
               <div className="text-[28px]">Back-End</div>
-              <div className="skill-bar flex gap-2">
+              <div className="skill-bar flex gap-2 flex-wrap">
                 <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" />
                 <img src="https://img.shields.io/badge/Rails-CC0000?style=for-the-badge&logo=rubyonrails&logoColor=white" />
                 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
@@ -58,7 +58,7 @@ const Home = () => {
 
             <div className="skill card">
               <div className="text-[28px]">Tools</div>
-              <div className="skill-bar flex gap-2">
+              <div className="skill-bar flex gap-2 flex-wrap">
                 <img src="https://img.shields.io/badge/RESTful%20API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
                 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
                 <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
