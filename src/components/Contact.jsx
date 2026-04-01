@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="Contact flex justify-center p-15">
-      <div className="body w-325 p-5 flex flex-col gap-15 items-center">
+      <div className="body w-full max-w-[1300px] p-5 flex flex-col gap-15 items-center">
         <div className="flex items-center">
           <h1 className="font-bold">Get in Touch</h1>
         </div>

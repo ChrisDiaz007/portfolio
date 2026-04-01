@@ -10,7 +10,7 @@ const Home = () => {
       <div className="absolute inset-0 -z-1">
         <SplineScene />
       </div>
-      <div className="w-325 relative z-1 p-5 ">
+      <div className="w-full max-w-[1300px] relative z-1 p-5 ">
         <div className="flex">
           <div className="w-2/4">
             <h1 className="font-bold">

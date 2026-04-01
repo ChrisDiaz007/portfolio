@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <section className="Navbar flex justify-center fixed top-0 w-full z-50 backdrop-blur-md">
-      <nav className="flex justify-end items-center gap-4 w-325 h-15">
+      <nav className="flex justify-end items-center gap-4 w-full max-w-[1300px] h-15">
         {listNav.map((value, key) => (
           <span
             key={key}
