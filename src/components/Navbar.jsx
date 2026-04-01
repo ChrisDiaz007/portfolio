@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const listNav = ["Home", "Projects", "Experience", "Contact", "Roadmap"];
+  const listNav = ["Home", "Projects", "Experience", "Contact"];
 
   return (
     <section className="Navbar flex justify-center ">
