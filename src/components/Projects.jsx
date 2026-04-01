@@ -3,7 +3,7 @@ import reacquaint from "../assets/reacquaint.png";
 
 const Projects = () => {
   return (
-    <section className="Projects flex justify-center py-15">
+    <section id="projects" className="Projects flex justify-center py-15">
       <div className="body w-325 p-5">
         <div>
           <h1 className="font-bold">Projects</h1>
@@ -66,7 +66,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="flex pt-10">View more work on Github</div>
+        {/* <div className="flex pt-10">View more work on Github</div> */}
       </div>
     </section>
   );

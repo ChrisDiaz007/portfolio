@@ -4,7 +4,10 @@ import SplineScene from "./SplineScene";
 
 const Home = () => {
   return (
-    <section className="Home relative flex justify-center py-15">
+    <section
+      id="home"
+      className="Home relative flex justify-center pt-30 pb-15"
+    >
       <div className="absolute inset-0 -z-1">
         <SplineScene />
       </div>
