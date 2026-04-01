@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faTimeline } from "@fortawesome/free-solid-svg-icons";
+import Modal from "./modal/Modal";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="Contact flex justify-center p-15">
       <div className="body w-325 p-5 flex flex-col gap-15 items-center">
         <div className="flex items-center">
-          <h1>Get in Touch</h1>
+          <h1 className="font-bold">Get in Touch</h1>
         </div>
         <div>
           <p>
@@ -39,9 +43,21 @@ const Contact = () => {
               className="text-white hover:text-purple-300 cursor-pointer"
             />
           </a>
-          <FontAwesomeIcon icon={faEnvelope} size="3x" />
+          {/* Open modal on click */}
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            size="3x"
+            className="text-white hover:text-purple-300 cursor-pointer"
+            onClick={() => setIsOpen(true)}
+          />
           <FontAwesomeIcon icon={faTimeline} size="3x" />
         </div>
+
+        {/* Modal */}
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          <h2 className="text-xl font-bold text-white mb-4">Contact Me</h2>
+          <ContactForm />
+        </Modal>
       </div>
     </section>
   );
