@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;500;700&display=swap");
+
+h1 {
+  font-family: "MuseoModerno", system-ui;
+  font-size: 55px;
+}
+
+/* p {
+  font-family: "Poppins", system-ui, sans-serif;
+} */
+
+body {
+  margin: 0;
+  font-family: Poppins;
+  background-color: #010824;
+  color: #eee;
+  /* font-size: 15px; */
+  min-height: 100vh;
+  background-image:
+    linear-gradient(to right, transparent 0 49px, #eee1 49px),
+    linear-gradient(to bottom, transparent 0 49px, #eee1 49px);
+  background-size: 50px 50px;
+  &::before {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(to right, #d02e23, #7a43b6);
+    z-index: -1;
+    top: -200px;
+    left: calc(50% - 200px);
+    border-radius: 50% 50% 0% 0%;
+    pointer-events: none;
+    filter: blur(250px);
+  }
+}
+
+.Project {
+  background: linear-gradient(-45deg, #473bb4, #be24a9);
+}
