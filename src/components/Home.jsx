@@ -1,4 +1,3 @@
-import React from "react";
 import demoDay from "../assets/demoDay.jpg";
 import SplineScene from "./SplineScene";
 

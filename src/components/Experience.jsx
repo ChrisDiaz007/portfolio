@@ -1,5 +1,3 @@
-import React from "react";
-
 const Experience = () => {
   return (
     <section id="experience" className="Experience flex justify-center p-15">
