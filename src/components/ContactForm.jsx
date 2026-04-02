@@ -39,6 +39,7 @@ export default function ContactForm() {
         setResult("Error sending message");
       }
     } catch (err) {
+      console.error(err);
       setResult("Network error");
     }
   };

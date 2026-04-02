@@ -39,7 +39,7 @@ const Experience = () => {
           <div>
             <p className="text-3xl">Miami Dade College(MDC)</p>
             <p className="text-gray-300">
-              Major in Cybersecurity, Bacherlor in Science
+              Major in Cybersecurity, Bachelor in Science
             </p>
             <p className="text-white">2017 - 2021</p>
           </div>

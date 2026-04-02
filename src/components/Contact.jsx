@@ -52,12 +52,13 @@ const Contact = () => {
           />
           <FontAwesomeIcon icon={faTimeline} size="3x" />
         </div>
-
-        {/* Modal */}
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
           <h2 className="text-xl font-bold text-white mb-4">Contact Me</h2>
           <ContactForm />
         </Modal>
+        <div>
+          <p>© 2025 Christopher Diaz. All rights reserved.</p>
+        </div>
       </div>
     </section>
   );
