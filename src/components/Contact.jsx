@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTimelineOpen, setIsTimelineOpen] = useState(false);
 
   return (
     <section id="contact" className="Contact flex justify-center p-15">
@@ -50,11 +51,22 @@ const Contact = () => {
             className="text-white hover:text-purple-300 cursor-pointer"
             onClick={() => setIsOpen(true)}
           />
-          <FontAwesomeIcon icon={faTimeline} size="3x" />
+          <FontAwesomeIcon
+            icon={faTimeline}
+            size="3x"
+            className="text-white hover:text-purple-300 cursor-pointer"
+            onClick={() => setIsTimelineOpen(true)}
+          />
         </div>
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
           <h2 className="text-xl font-bold text-white mb-4">Contact Me</h2>
           <ContactForm />
+        </Modal>
+        <Modal isOpen={isTimelineOpen} onClose={() => setIsTimelineOpen(false)}>
+          <h2 className="text-xl font-bold text-white mb-4">
+            Christopher Diaz
+          </h2>
+          <p className="text-gray-300">Fullstack Developer</p>
         </Modal>
         <div>
           <p>© 2025 Christopher Diaz. All rights reserved.</p>
